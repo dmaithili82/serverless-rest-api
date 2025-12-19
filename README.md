@@ -87,11 +87,12 @@ curl https://<api-id>.execute-api.us-east-1.amazonaws.com/prod/items/<item-id>
 
 ## Lambda Functions Overview
 
-## Lambda Function Responsibility
+| Lambda Function    | Responsibility                              |
+| ------------------ | ------------------------------------------- |
+| CreateItemFunction | Validates input and stores data in DynamoDB |
+| ListItemsFunction  | Retrieves all items from DynamoDB           |
+| GetItemFunction    | Retrieves a single item by ID               |
 
-CreateItemFunction Validates input and stores data in DynamoDB
-ListItemsFunction	Retrieves all items from DynamoDB
-GetItemFunction Retrieves a single item by ID
 
 Each Lambda function follows the single-responsibility principle and is mapped to a specific API route.
 
